@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".IncidentInformation">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Choose Type*"
+        android:textSize="16sp"
+        android:textColor="@color/card_blue"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="*Go to Type of Emergency tab in Profile menu to know the type or give description about it."
+        android:textSize="10sp"
+        android:textColor="@color/red"/>
+
+    <RadioGroup
+        android:id="@+id/emergency_type_radio_group"
+        android:layout_width="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_accident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Accident / Incident" />
+
+        <RadioButton
+            android:id="@+id/radio_rescue_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Rescue Situations" />
+
+        <RadioButton
+            android:id="@+id/radio_utility_emergencies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Utility Emergency" />
+        <RadioButton
+            android:id="@+id/radio_natural_disaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Natural Disaster" />
+
+        <RadioButton
+            android:id="@+id/radio_environmental"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Environmental Emergency" />
+        <RadioButton
+            android:id="@+id/radio_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Security Threat" />
+
+        <RadioButton
+            android:id="@+id/radio_weather_related"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14dp"
+            android:text="Weather-related Emergency" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Short Description*"
+        android:textColor="@color/card_blue"
+        android:textSize="16dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <EditText
+
+        android:id="@+id/report_description"
+
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:textSize="16dp"
+        android:hint="Ex: Gas leak / Road accident"
+        android:textColorHint="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingVertical="10dp"
+        android:paddingRight="10dp"
+        android:inputType="text"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/card_blue"
+        android:textCursorDrawable="@drawable/custom_cursor" />
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location*"
+        android:textColor="@color/card_blue"
+        android:textSize="16dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <RadioGroup
+        android:id="@+id/incident_location_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_your_location"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Your Current location" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Other" />
+
+    </RadioGroup>
+
+
+    <EditText
+
+        android:id="@+id/report_manual_location"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:textSize="16dp"
+        android:hint="Enter location"
+        android:textColorHint="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingVertical="10dp"
+        android:paddingRight="10dp"
+        android:inputType="text"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/card_blue"
+        android:textCursorDrawable="@drawable/custom_cursor" />
+
+    <TextView
+        android:id="@+id/report_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="+ upload any incident image (Optional)"
+        android:textSize="14sp"
+        android:textColor="@color/card_blue"/>
+
+    <Button
+        android:id="@+id/report_button"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="@color/green"
+        android:text="Report"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="16sp"/>
+</LinearLayout>
+</ScrollView>

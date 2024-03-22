@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UserSOSFragment">
+
+    <TextView
+        android:id="@+id/locationHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Your current location"
+        android:textSize="16sp"
+        android:textColor="@color/card_blue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userSOS_locationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Location Information"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/locationHeading"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/locationUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Last updated at :  "
+        android:textSize="10sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/userSOS_locationText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/userSOS_locationLastUpdate"/>
+
+    <TextView
+        android:id="@+id/userSOS_locationLastUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="16/03/2024 19:00:23 "
+        android:textSize="10sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/userSOS_locationText"
+        app:layout_constraintStart_toEndOf="@id/locationUpdate"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/updateLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Update location"
+        android:layout_marginEnd="4dp"
+        android:textSize="10sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/card_blue"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/userSOS_locationText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/userSOS_updateLocationButton"/>
+
+    <Button
+        android:id="@+id/userSOS_viewOnMapsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/card_blue"
+        android:text="View on Google Maps"
+        android:drawableEnd="@drawable/google_maps"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/locationUpdate"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/userSOS_updateLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_shape_card_blue"
+        android:contentDescription="Update location"
+        android:padding="8dp"
+        android:src="@drawable/update_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/userSOS_viewOnMapsButton"
+        app:layout_constraintTop_toBottomOf="@id/updateLocation"
+        app:layout_constraintBottom_toTopOf="@id/separatorLine"/>
+
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/userSOS_viewOnMapsButton"
+        android:layout_marginTop="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/userSOS_SOSButton"
+        android:layout_width="174dp"
+        android:layout_height="173dp"
+        android:background="@drawable/circle_shape_red"
+        android:contentDescription="SOS"
+        android:padding="8dp"
+        android:src="@drawable/sos_icon"
+        android:tooltipText="Emergency SOS"
+        app:layout_constraintBottom_toTopOf="@id/userSOS_registerIncidentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorLine" />
+
+    <TextView
+        android:id="@+id/userSOS_registerIncidentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="+ Report an Emergency"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userSOS_SOSButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".UserRegistration">
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="User Verification"
+        android:textSize="18dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Heading"
+        android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Aadhar number"
+        android:textColor="@color/card_blue"
+        android:textSize="14dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:scrollHorizontally="true" />
+
+    <EditText
+
+        android:id="@+id/userRegistration_mobileNumber"
+
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:textSize="16dp"
+        android:drawableLeft="@drawable/icons_card"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:paddingRight="10dp"
+        android:inputType="number"
+        android:maxLength="12"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/card_blue"
+        android:textCursorDrawable="@drawable/custom_cursor"/>
+
+    <TextView
+
+        android:id="@+id/userRegistration_aadharNumberWarning"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/red"
+        android:text="*Please enter a valid aadhar number"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Blood Group"
+        android:textColor="@color/card_blue"
+        android:textSize="14dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_semibold"
+        android:scrollHorizontally="true" />
+
+    <Spinner
+        android:id="@+id/bloodGroup"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:paddingVertical="4dp" />
+
+        <CheckBox
+        android:id="@+id/userRegistration_checkBox"
+
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_gravity="left"
+        android:gravity="center_vertical"
+        android:text=" Terms &amp; Conditions"
+        android:buttonTint="@color/card_blue"
+        android:textColor="@color/card_blue"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColorLink="@color/card_blue"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        android:text="By clicking, you agree to all T&amp;C."
+        android:fontFamily="@font/poppins_medium"/>
+        </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/userRegistration_continue"
+        android:clickable="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:text="Continue"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+
+        />
+
+
+
+</RelativeLayout>

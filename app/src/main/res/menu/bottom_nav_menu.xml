@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_sos"
+        android:icon="@drawable/sos_selector"
+        android:title="@string/SOS"/>
+    <item
+        android:id="@+id/nav_live"
+        android:icon="@drawable/live_selector"
+        android:title="@string/Live"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_selector"
+        android:title="@string/Profile"/>
+
+</menu>

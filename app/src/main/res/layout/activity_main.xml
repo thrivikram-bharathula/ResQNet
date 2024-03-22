@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/textArt"
+        android:src="@drawable/resqnet_text_art"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/userButton"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/userButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingVertical="10dp"
+        android:text="User"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/volunteerButton"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textArt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/volunteerButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingVertical="10dp"
+        android:text="Volunteer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userButton"
+        app:layout_constraintBottom_toTopOf="@id/amenitiesButton"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/amenitiesButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingVertical="10dp"
+        android:text="Public Amenity"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volunteerButton"
+        app:layout_constraintBottom_toTopOf="@id/reliefOrganisationButton"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/reliefOrganisationButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingVertical="10dp"
+        android:text="Relief Organization"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amenitiesButton"
+        app:layout_constraintBottom_toTopOf="@id/HelpLineButton"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/HelpLineButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingVertical="10dp"
+        android:text="Help Line"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reliefOrganisationButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
