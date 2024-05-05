@@ -12,19 +12,19 @@ import androidx.core.content.ContextCompat
 
 class UserRegistration : AppCompatActivity() {
 
-    lateinit var mobileNumberWarning : TextView
-    lateinit var SignUpMobileNumber : EditText
+    lateinit var aadhaarNumberWarning : TextView
+    lateinit var aadhaarNumber : EditText
     lateinit var continueBtn : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_registration)
 
-        var MobileNumber : String = "123456789"
+        var AadhaarNumber : String = "012345678910"
         continueBtn = findViewById(R.id.userRegistration_continue)
         continueBtn.isClickable = false
-        SignUpMobileNumber = findViewById(R.id.userRegistration_MobileNumber)
-        mobileNumberWarning = findViewById(R.id.userRegistration_mobileNumberWarning)
-        SignUpMobileNumber.addTextChangedListener(object : TextWatcher {
+        aadhaarNumber = findViewById(R.id.userRegistration_aadhaarNumber)
+        aadhaarNumberWarning = findViewById(R.id.userRegistration_aadharNumberWarning)
+        aadhaarNumber.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
@@ -35,12 +35,12 @@ class UserRegistration : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 val Numbertext = s.toString()
-                if(Numbertext.length<10)
+                if(Numbertext.length<12)
                 {
                     continueBtn.isClickable = false
                     continueBtn.setBackgroundColor(resources.getColor(R.color.grey))
-                    mobileNumberWarning.text = "*Mobile Number should be atleast 10 digits"
-                    mobileNumberWarning.setTextColor(
+                    aadhaarNumberWarning.text = "*Aadhaar Number should be atleast 12 digits"
+                    aadhaarNumberWarning.setTextColor(
                         ContextCompat.getColor(this@UserRegistration,
                         R.color.red
                     ))
@@ -49,9 +49,9 @@ class UserRegistration : AppCompatActivity() {
                 {
                     continueBtn.isClickable = true
                     continueBtn.setBackgroundColor(resources.getColor(R.color.card_blue))
-                    MobileNumber = s.toString()
-                    mobileNumberWarning.text = "Mobile number is valid"
-                    mobileNumberWarning.setTextColor(
+                    AadhaarNumber = s.toString()
+                    aadhaarNumberWarning.text = "Aadhaar number is valid"
+                    aadhaarNumberWarning.setTextColor(
                         ContextCompat.getColor(this@UserRegistration,
                         R.color.green
                     ))
@@ -62,7 +62,7 @@ class UserRegistration : AppCompatActivity() {
         continueBtn.setOnClickListener {
 
             val intent = Intent(this,MobileNumberOTP::class.java)
-            intent.putExtra("MOBILENUMBER", MobileNumber)
+            intent.putExtra("AadhaarNumber", AadhaarNumber)
             startActivity(intent)
         }
     }

@@ -28,13 +28,12 @@
         android:orientation="vertical">
 
 
-
     <TextView
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:text="Aadhar number"
+        android:text="Aadhaar number"
         android:textColor="@color/card_blue"
         android:textSize="14dp"
         android:fontFamily="@font/poppins_semibold"
@@ -42,14 +41,14 @@
 
     <EditText
 
-        android:id="@+id/userRegistration_mobileNumber"
+        android:id="@+id/userRegistration_aadhaarNumber"
 
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_background"
-        android:textSize="16dp"
-        android:drawableLeft="@drawable/icons_card"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/icons_card"
         android:paddingLeft="10dp"
         android:drawablePadding="10dp"
         android:paddingVertical="10dp"
@@ -92,7 +91,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_background"
         android:paddingVertical="4dp" />
-
         <CheckBox
         android:id="@+id/userRegistration_checkBox"
 
@@ -105,8 +103,7 @@
         android:text=" Terms &amp; Conditions"
         android:buttonTint="@color/card_blue"
         android:textColor="@color/card_blue"
-        android:fontFamily="@font/poppins_semibold"
-        android:textColorLink="@color/card_blue"/>
+        android:fontFamily="@font/poppins_semibold"/>
 
 
     <TextView
