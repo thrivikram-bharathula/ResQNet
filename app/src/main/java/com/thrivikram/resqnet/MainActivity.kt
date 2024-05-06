@@ -16,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var intent : Intent
         userButton = findViewById(R.id.userButton)
+        volunteerButton = findViewById(R.id.volunteerButton)
+        publicAmenityButton = findViewById(R.id.amenitiesButton)
+        reliefOrgButton = findViewById(R.id.reliefOrganisationButton)
+        helpLineButton = findViewById(R.id.HelpLineButton)
+
+
         userButton.setOnClickListener{
-            intent = Intent(this, login_common::class.java)
+            intent = Intent(this, UserRegistration::class.java)
             startActivity(intent)
         }
         volunteerButton.setOnClickListener{
