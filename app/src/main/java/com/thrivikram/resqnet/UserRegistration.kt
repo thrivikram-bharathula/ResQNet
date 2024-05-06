@@ -12,14 +12,14 @@ import androidx.core.content.ContextCompat
 
 class UserRegistration : AppCompatActivity() {
 
-    lateinit var aadhaarNumberWarning : TextView
-    lateinit var aadhaarNumber : EditText
-    lateinit var continueBtn : Button
+    lateinit var aadhaarNumberWarning: TextView
+    lateinit var aadhaarNumber: EditText
+    lateinit var continueBtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_registration)
 
-        var AadhaarNumber : String = "012345678910"
+        var AadhaarNumber: String = "012345678910"
         continueBtn = findViewById(R.id.userRegistration_continue)
         continueBtn.isClickable = false
         aadhaarNumber = findViewById(R.id.userRegistration_aadhaarNumber)
@@ -35,33 +35,34 @@ class UserRegistration : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 val Numbertext = s.toString()
-                if(Numbertext.length<12)
-                {
+                if (Numbertext.length < 12) {
                     continueBtn.isClickable = false
                     continueBtn.setBackgroundColor(resources.getColor(R.color.grey))
                     aadhaarNumberWarning.text = "*Aadhaar Number should be atleast 12 digits"
                     aadhaarNumberWarning.setTextColor(
-                        ContextCompat.getColor(this@UserRegistration,
-                        R.color.red
-                    ))
-                }
-                else
-                {
+                        ContextCompat.getColor(
+                            this@UserRegistration,
+                            R.color.red
+                        )
+                    )
+                } else {
                     continueBtn.isClickable = true
                     continueBtn.setBackgroundColor(resources.getColor(R.color.card_blue))
                     AadhaarNumber = s.toString()
                     aadhaarNumberWarning.text = "Aadhaar number is valid"
                     aadhaarNumberWarning.setTextColor(
-                        ContextCompat.getColor(this@UserRegistration,
-                        R.color.green
-                    ))
+                        ContextCompat.getColor(
+                            this@UserRegistration,
+                            R.color.green
+                        )
+                    )
                 }
             }
         })
 
         continueBtn.setOnClickListener {
 
-            val intent = Intent(this,MobileNumberOTP::class.java)
+            val intent = Intent(this, MobileNumberOTP::class.java)
             intent.putExtra("AadhaarNumber", AadhaarNumber)
             startActivity(intent)
         }

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".login_common">
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Heading"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:scrollHorizontally="true"
+            android:text="Username"
+            android:textColor="@color/card_blue"
+            android:textSize="14dp" />
+
+        <EditText
+
+            android:id="@+id/login_userName"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@drawable/icons_card"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="number"
+            android:maxLength="12"
+            android:paddingVertical="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/card_blue"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:scrollHorizontally="true"
+            android:text="Password"
+            android:textColor="@color/card_blue"
+            android:textSize="14dp" />
+
+        <EditText
+
+            android:id="@+id/login_password"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="number"
+            android:maxLength="12"
+            android:paddingVertical="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/card_blue"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="16sp" />
+
+
+        <TextView
+
+            android:id="@+id/login_warning"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="*Please enter valid credentials"
+            android:textColor="@color/red"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/login_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/grey"
+        android:clickable="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="16dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+        />
+
+
+</RelativeLayout>
