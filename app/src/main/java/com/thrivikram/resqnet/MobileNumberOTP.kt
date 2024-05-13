@@ -37,7 +37,7 @@ class MobileNumberOTP : AppCompatActivity() {
         MobileOtpCountDown = findViewById(R.id.mobileVerification_CountDown)
         MobileResendOtp = findViewById(R.id.mobileNumberVerification_resendOtp)
 
-        val mobileToDisplay = intent.getStringExtra("MOBILENUMBER")
+        val mobileToDisplay = intent.getStringExtra("AadhaarNumber")
         MobileVerificationNumber.text = mobileToDisplay.toString()
         MobileResendOtp.isClickable = false
 

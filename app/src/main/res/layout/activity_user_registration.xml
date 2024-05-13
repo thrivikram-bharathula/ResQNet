@@ -84,24 +84,26 @@
         android:fontFamily="@font/poppins_semibold"
         android:scrollHorizontally="true" />
 
-    <Spinner
-        android:id="@+id/bloodGroup"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_background"
-        android:paddingVertical="4dp" />
+        <Spinner
+            android:id="@+id/bloodGroup"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/Select"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:entries="@array/blood_groups" />
+
         <CheckBox
         android:id="@+id/userRegistration_checkBox"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
         android:layout_gravity="left"
         android:gravity="center_vertical"
         android:text=" Terms &amp; Conditions"
-        android:buttonTint="@color/card_blue"
         android:textColor="@color/card_blue"
         android:fontFamily="@font/poppins_semibold"/>
 

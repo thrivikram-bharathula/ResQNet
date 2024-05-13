@@ -1,8 +1,10 @@
 package com.thrivikram.resqnet
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -36,5 +38,9 @@ class UserHomeScreen : AppCompatActivity() {
                 .replace(R.id.fragment_wrapper, selectedFragment).commit()
             true
         }
+    }
+
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
     }
 }

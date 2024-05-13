@@ -14,21 +14,38 @@
     tools:context=".IncidentInformation">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Choose Type*"
-        android:textSize="16sp"
-        android:textColor="@color/card_blue"/>
+        android:layout_marginBottom="10dp"
+        android:gravity="right">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Choose Type*"
+            android:textSize="16sp"
+            android:textColor="@color/card_blue"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_icon"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="*Go to Type of Emergency tab in Profile menu to know the type or give description about it."
+        android:text="*Please fill all required details"
         android:textSize="10sp"
         android:textColor="@color/red"/>
 
@@ -39,7 +56,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_accident"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +64,7 @@
             android:textSize="14dp"
             android:text="Accident / Incident" />
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_rescue_situation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,14 +72,14 @@
             android:textSize="14dp"
             android:text="Rescue Situations" />
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_utility_emergencies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:textSize="14dp"
             android:text="Utility Emergency" />
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_natural_disaster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,14 +87,14 @@
             android:textSize="14dp"
             android:text="Natural Disaster" />
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_environmental"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:textSize="14dp"
             android:text="Environmental Emergency" />
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_security"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +102,7 @@
             android:textSize="14dp"
             android:text="Security Threat" />
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_weather_related"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,7 +155,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_your_location"
             android:layout_marginEnd="8dp"
             android:layout_width="wrap_content"
@@ -146,7 +163,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Your Current location" />
 
-        <RadioButton
+        <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,7 +182,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_background"
         android:textSize="16dp"
-        android:hint="Enter location"
+        android:hint="Ex: 4-8, Raja street.."
         android:textColorHint="@color/grey"
         android:paddingLeft="10dp"
         android:paddingVertical="10dp"
@@ -184,7 +201,16 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="+ upload any incident image (Optional)"
         android:textSize="14sp"
-        android:textColor="@color/card_blue"/>
+        android:textColor="@color/card_blue"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/report_button"
@@ -192,7 +218,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/red"
         android:text="Report"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"/>

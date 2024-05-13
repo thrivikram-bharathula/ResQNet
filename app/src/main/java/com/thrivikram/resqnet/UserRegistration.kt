@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 
@@ -59,6 +61,14 @@ class UserRegistration : AppCompatActivity() {
                 }
             }
         })
+//        val bloodGroupSpinner = findViewById<Spinner>(R.id.bloodGroup)
+//
+//        val bloodGroups = resources.getStringArray(R.array.blood_groups)
+//
+//        val bloodGroupAdapter = ArrayAdapter(this,
+//            android.R.layout.simple_spinner_item,
+//            bloodGroups.toList())
+//        bloodGroupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         continueBtn.setOnClickListener {
 

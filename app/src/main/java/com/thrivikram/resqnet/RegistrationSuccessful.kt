@@ -1,5 +1,7 @@
 package com.thrivikram.resqnet
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +16,9 @@ class RegistrationSuccessful : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration_successful)
 
+        val prefs = getSharedPreferences("com.resqnet.prefs", Context.MODE_PRIVATE)
+
+        prefs.edit().putBoolean("is_logged_out", false).apply()
         animationView = findViewById(R.id.animation_view)
         proceed = findViewById(R.id.SignUpCompatButton)
 
@@ -24,5 +29,9 @@ class RegistrationSuccessful : AppCompatActivity() {
             val intent = Intent(this, UserHomeScreen::class.java)
             startActivity(intent)
         }
+    }
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        // Do nothing
     }
 }
