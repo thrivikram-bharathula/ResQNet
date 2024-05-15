@@ -85,6 +85,9 @@
         android:drawableEnd="@drawable/google_maps"
         android:fontFamily="@font/poppins_medium"
         android:textSize="12sp"
+        android:textColor="@color/white"
+        android:drawablePadding="8dp"
+        android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@id/locationUpdate"
         app:layout_constraintLeft_toLeftOf="parent"/>
 

@@ -9,6 +9,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 
@@ -35,8 +36,8 @@ class login_common : AppCompatActivity() {
         continueBtn = findViewById(R.id.login_continue)
         warning = findViewById(R.id.login_warning)
 
-        val headingToDisplay = intent.getStringExtra("TYPE")
-        heading.text = "${headingToDisplay.toString()} Login"
+        val headingToDisplay = intent.getStringExtra("Type")
+        heading.text =  headingToDisplay + " Login"
         continueBtn.isClickable = false
 
         userName.addTextChangedListener(object : TextWatcher {
@@ -96,8 +97,9 @@ class login_common : AppCompatActivity() {
         })
 
         continueBtn.setOnClickListener {
-            val intent = Intent(this, RegistrationSuccessful::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Sorry! Firebase is Down. Try after Some Time!", Toast.LENGTH_SHORT).show()
+            //val intent = Intent(this, RegistrationSuccessful::class.java)
+            //startActivity(intent)
         }
     }
 }

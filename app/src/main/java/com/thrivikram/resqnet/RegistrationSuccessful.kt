@@ -18,7 +18,7 @@ class RegistrationSuccessful : AppCompatActivity() {
 
         val prefs = getSharedPreferences("com.resqnet.prefs", Context.MODE_PRIVATE)
 
-        prefs.edit().putBoolean("is_logged_out", false).apply()
+        prefs.edit().putBoolean("is_logged_in", true).apply()
         animationView = findViewById(R.id.animation_view)
         proceed = findViewById(R.id.SignUpCompatButton)
 

@@ -21,7 +21,7 @@
         android:gravity="right">
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="5"
+            android:layout_weight="10"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_semibold"
@@ -29,13 +29,16 @@
             android:textSize="16sp"
             android:textColor="@color/card_blue"/>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/close_icon"
             android:layout_width="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="close"
             android:clickable="true"
             android:focusable="true"
             android:layout_height="wrap_content"
             android:src="@drawable/close_icon"
+            android:backgroundTint="@color/white"
             android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
@@ -43,7 +46,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/poppins_medium"
         android:text="*Please fill all required details"
         android:textSize="10sp"
@@ -61,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Accident / Incident" />
 
         <RadioButton android:buttonTint="@color/card_blue"
@@ -69,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Rescue Situations" />
 
         <RadioButton android:buttonTint="@color/card_blue"
@@ -77,14 +80,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Utility Emergency" />
         <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_natural_disaster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Natural Disaster" />
 
         <RadioButton android:buttonTint="@color/card_blue"
@@ -92,14 +95,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Environmental Emergency" />
         <RadioButton android:buttonTint="@color/card_blue"
             android:id="@+id/radio_security"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Security Threat" />
 
         <RadioButton android:buttonTint="@color/card_blue"
@@ -107,14 +110,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14dp"
+            android:textSize="16dp"
             android:text="Weather-related Emergency" />
 
 
     </RadioGroup>
 
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="14dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Short Description*"
@@ -160,6 +163,7 @@
             android:layout_marginEnd="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Your Current location" />
 
@@ -167,6 +171,7 @@
             android:id="@+id/radio_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Other" />
 
@@ -217,9 +222,12 @@
         android:clickable="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/red"
         android:text="Report"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:padding="16dp"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"/>
 </LinearLayout>

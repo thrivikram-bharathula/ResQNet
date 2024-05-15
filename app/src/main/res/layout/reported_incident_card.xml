@@ -41,6 +41,7 @@
                 android:id="@+id/report_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:src="@drawable/delete_icon"
                 android:background="@color/white"/>
 
@@ -88,14 +89,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Intensity"
+                android:text="ID"
                 android:textSize="10dp"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black"/>
 
             <TextView
 
-                android:id="@+id/incident_intensity"
+                android:id="@+id/incident_id"
 
                 android:layout_width="wrap_content"
                 android:layout_weight="2"
@@ -103,12 +104,13 @@
                 android:layout_marginLeft="8dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="High"
-                android:textColor="@color/red"
+                android:textColor="@color/card_blue"
                 android:textSize="12dp"/>
             <ImageButton
                 android:id="@+id/report_call"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:src="@drawable/icons_phoneotp"
                 android:background="@color/white"/>
 
@@ -135,6 +137,7 @@
                 android:drawablePadding="6dp"
                 android:drawableStart="@drawable/location_unfilled"
                 android:text="Near ABC Cross roads, Vadlamudi"
+                android:lines="1"
                 android:textColor="@color/white"
                 android:textSize="12dp"/>
 

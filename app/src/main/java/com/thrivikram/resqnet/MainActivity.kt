@@ -15,10 +15,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val prefs = getSharedPreferences("com.resqnet.prefs", Context.MODE_PRIVATE)
-        val isLoggedIn = prefs.getBoolean("is_logged_out", true)
+        val isLoggedIn = prefs.getBoolean("is_logged_in", false)
 
-        if (!isLoggedIn) {
-            prefs.edit().putBoolean("is_logged_out", true).apply()
+        if (isLoggedIn) {
             val intent = Intent(this, UserHomeScreen::class.java)
             startActivity(intent)
         } else {

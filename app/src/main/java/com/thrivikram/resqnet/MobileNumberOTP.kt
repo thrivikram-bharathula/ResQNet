@@ -1,5 +1,6 @@
 package com.thrivikram.resqnet
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -92,7 +93,8 @@ class MobileNumberOTP : AppCompatActivity() {
 
         MobileNumberContinueBtn.setOnClickListener {
             if(isOtpEntered) {
-
+                val prefs = this.getSharedPreferences("com.resqnet.prefs", Context.MODE_PRIVATE)
+                prefs.edit().putString("Aadhaar", mobileToDisplay).apply()
                 val intent = Intent(this, RegistrationSuccessful::class.java)
                 startActivity(intent)
             }

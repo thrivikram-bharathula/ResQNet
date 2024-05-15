@@ -75,10 +75,11 @@
 
 
     <LinearLayout
-            android:id="@+id/yourStocksOpenBtn"
+            android:id="@+id/yourReports"
             android:layout_width="match_parent"
             android:gravity="center_vertical"
             android:clickable="true"
+            android:focusable="true"
             android:layout_height="wrap_content">
 
             <ImageView
